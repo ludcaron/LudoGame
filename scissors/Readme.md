@@ -31,3 +31,7 @@ This is a simple command-line implementation of the Stone, Scissors, Paper game 
    ```
 
 ## Example
+
+Enter your choice (stone, scissors, paper): stone
+You chose: stone Computer chose: scissors
+You win!
