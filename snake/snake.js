@@ -64,6 +64,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // Function to check for collisions
+  /**
+   * Checks for collisions in the snake game.
+   *
+   * This function checks if the snake has collided with the walls, itself, or any obstacles.
+   *
+   * @returns {boolean} Returns true if a collision is detected, otherwise false.
+   */
   function checkCollision() {
     const head = snake[0];
     // Check if the snake hits the walls
@@ -90,6 +97,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     return false;
   }
 
+  /**
+   * Restarts the game by resetting the snake's position, direction, food position, and score.
+   * Hides the game over message and restart button, and updates the score display.
+   */
   function restartGame() {
     snake = [{ x: gridSize * 5, y: gridSize * 5 }];
     direction = { x: 0, y: 0 };
@@ -101,6 +112,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // Afficher le bouton de redémarrage lorsque le jeu est terminé
+  /**
+   * The main game loop function that handles the game's logic and rendering.
+   * It checks for collisions, updates the game state, and renders the game elements.
+   * If a collision is detected, it displays the final score and game over message,
+   * and shows the restart button.
+   */
   function gameLoop() {
     if (checkCollision()) {
       document.getElementById("finalScore").textContent = score;
